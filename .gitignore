@@ -2,4 +2,5 @@
 .zsh_history
 .zsh-update
 .oh-my-zsh
+.zcompdump
 .CFUserTextEncoding

@@ -60,21 +60,21 @@ alias pad='padrino'
 
 # Utils
 # ----
-alias tm  = 'mate .'
-alias fd  = 'open .'
-alias l   = "ls -lAh"
-alias ll  = "ls -l"
-alias la  = 'ls -A'
-alias lla = 'ls -lA'
+alias tm='mate .'
+alias fd='open .'
+alias l="ls -lAh"
+alias ll="ls -l"
+alias la='ls -A'
+alias lla='ls -lA'
 
 # DNS Utils
 # ---------
-alias flushdns = 'sudo dscacheutil -flushcache'
+alias flushdns='sudo dscacheutil -flushcache'
 
 # MySQL
 # -----
-alias importdb = 'mysql --default-character-set=utf8 -u root -p'
+alias importdb='mysql --default-character-set=utf8 -u root -p'
 
 # HTTP Utils
 # ----------
-alias loghttp = 'tail -f /var/log/apache2/error_log'
+alias loghttp='tail -f /var/log/apache2/error_log'

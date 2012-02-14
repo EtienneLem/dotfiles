@@ -1,6 +1,10 @@
+# All files & folders
+.*
 */*
-.zsh_history
-.zsh-update
-.oh-my-zsh
-.zcompdump
-.CFUserTextEncoding
+
+# Versioned dotfiles
+!/.gitignore
+!/.gemrc
+!/.gitconfig
+!/.global_ignore
+!/.zshrc

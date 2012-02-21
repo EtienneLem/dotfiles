@@ -39,17 +39,12 @@ export RUBYOPT="rubygems"
 export PATH="/usr/local/bin:$PATH"
 
 # ruby
-export PATH="/usr/local/ruby/1.9.2-p290/bin:$PATH"
+ruby_r19="/usr/local/ruby/1.9.2-p290/bin"
+ruby_r18="/usr/local/ruby/1.8.7-p357/bin"
+export PATH="$ruby_r18:$PATH"
 
 # node
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
-
-#export GEM_HOME="/usr/local/ruby/1.9.2-p290"
-#export GEM_PATH="/usr/local/ruby/1.9.2-p290"
-
-# custom
-#export PATH="$HOME/bin:$PATH"
-
 
 # Aliases
 # =======

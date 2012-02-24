@@ -1,75 +1,100 @@
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+# Totally ripped off @rafbm's dotfiles... teehee
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="steeef"
 
-# Set to this to use case-sensitive completion
-CASE_SENSITIVE="true"
+# =============== #
+#   Environment   #
+# =============== #
 
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+export EDITOR="mate -w"
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want disable red dots displayed while waiting for completion
-DISABLE_COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-unsetopt correct_all
-
-# Customize to your needs...
-NODE_PATH="/usr/local/lib/node"
-
-export RUBYOPT="rubygems"
-
-# homebrew
+# Homebrew
 export PATH="/usr/local/bin:$PATH"
 
-# ruby
-ruby_r19="/usr/local/ruby/1.9.2-p290/bin"
-ruby_r18="/usr/local/ruby/1.8.7-p357/bin"
-export PATH="$ruby_r18:$PATH"
+# Custom
+export PATH="$HOME/bin:$PATH"
 
-# node
+# ruby
+ruby_r18="/usr/local/ruby/1.8.7-p357/bin"
+ruby_r19="/usr/local/ruby/1.9.2-p290/bin"
+export PATH="$ruby_r19:$PATH"
+export RUBYOPT="rubygems"
+
+# Node
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 
-# Aliases
-# =======
+
+# =========== #
+#   Aliases   #
+# =========== #
+
+alias reload="source ~/.zshrc"
+alias m.="mate ."
+alias tm="mate ."
+alias o.="open ."
+alias fd="open ."
+alias showhidden="defaults write com.apple.finder AppleShowAllFiles true && killall Finder"
+alias hidehidden="defaults write com.apple.finder AppleShowAllFiles false && killall Finder"
+
+# Git
+alias gti="git" # shame
+
+alias glog="git log --oneline --decorate"
+alias gst="git status -sbu"
+alias gdiff="git diff"
+alias gadd="git add -p"
+alias gci="git commit -v"
+alias gcia="git commit -va"
+alias grebase="git rebase -i"
+alias gpull="git pull --rebase origin"
+alias gpush="git push origin"
+alias gstash="git stash save"
+alias gpop="git stash pop"
 
 # Padrino
-# -------
 alias pad='padrino'
 
-# Utils
-# ----
-alias tm='mate .'
-alias fd='open .'
-alias l="ls -lAh"
-alias ll="ls -l"
-alias la='ls -A'
-alias lla='ls -lA'
-
-# DNS Utils
-# ---------
+# DNS
 alias flushdns='sudo dscacheutil -flushcache'
 
-# MySQL
-# -----
-alias importdb='mysql --default-character-set=utf8 -u root -p'
-
-# HTTP Utils
-# ----------
+# HTTP
 alias loghttp='tail -f /var/log/apache2/error_log'
+
+
+# ========== #
+#   Prompt   #
+# ========== #
+
+# Colors
+autoload -U colors
+colors
+setopt prompt_subst
+
+# PROMPT
+local percent="%(?,%{$fg[green]%}%#%{$reset_color%},%{$fg[red]%}%#%{$reset_color%})"
+
+PROMPT='
+%F{135}%~%{$reset_color%}  $(git-prompt.rb)
+${percent} %{$reset_color%}'
+
+RPROMPT='%F{16}$(date)%{$reset_color%}'
+
+# History (stolen from oh-my-zsh)
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt hist_ignore_dups # ignore duplication command history list
+setopt share_history # share command history data
+
+setopt hist_verify
+setopt inc_append_history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_space
+
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+
+# Completions for Ruby, Git, etc.
+autoload compinit
+compinit

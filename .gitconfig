@@ -32,10 +32,10 @@
   sub = "submodule"
   lg  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
-  unstage  = reset HEAD           # unstage
-  clear    = reset --hard HEAD    # erase uncommited file edits (destructive!)
-  uncommit = reset HEAD~1         # erase last commit but keeps related file edits
-  rollback = reset --hard HEAD~1  # erase last commit and related file edits (destructive!)
+  unstage   = reset HEAD            # unstage
+  clear     = reset --hard HEAD     # erase uncommited file edits (destructive!)
+  uncommit  = reset HEAD~1          # erase last commit but keeps related file edits
+  rollback  = reset --hard HEAD~1   # erase last commit and related file edits (destructive!)
 
 [core]
   editor = mate -w

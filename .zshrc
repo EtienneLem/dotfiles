@@ -52,7 +52,7 @@ alias gstash="git stash save"
 alias gpop="git stash pop"
 
 # Padrino
-alias pad='padrino'
+alias pad='bundle exec padrino'
 
 # DNS
 alias flushdns='sudo dscacheutil -flushcache'

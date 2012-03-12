@@ -10,14 +10,14 @@ export EDITOR="mate -w"
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
 
-# Custom
-export PATH="$HOME/bin:$PATH"
-
 # ruby
 ruby_r18="/usr/local/ruby/1.8.7-p357/bin"
 ruby_r19="/usr/local/ruby/1.9.2-p290/bin"
 export PATH="$ruby_r19:$PATH"
 export RUBYOPT="rubygems"
+
+# Custom
+export PATH="$HOME/bin:$PATH"
 
 # Node
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"

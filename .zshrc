@@ -34,6 +34,7 @@ alias o.="open ."
 alias fd="open ."
 alias showhidden="defaults write com.apple.finder AppleShowAllFiles true && killall Finder"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles false && killall Finder"
+alias ll="ls -l"
 
 # Git
 alias gti="git" # shame

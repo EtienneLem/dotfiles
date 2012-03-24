@@ -58,8 +58,11 @@ alias gsubu="git submodule update"
 alias gdesactive="mv .git .git-inactive"
 alias gactive="mv .git-inactive .git"
 
+# Bundle
+alias be='bundle exec '
+
 # Padrino
-alias pad='bundle exec padrino'
+alias pad='padrino'
 
 # DNS
 alias flushdns='sudo dscacheutil -flushcache'

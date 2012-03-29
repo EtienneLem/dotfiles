@@ -32,8 +32,6 @@ alias m.="mate ."
 alias tm="mate ."
 alias o.="open ."
 alias fd="open ."
-alias showhidden="defaults write com.apple.finder AppleShowAllFiles true && killall Finder"
-alias hidehidden="defaults write com.apple.finder AppleShowAllFiles false && killall Finder"
 alias ll="ls -l"
 
 # Git
@@ -73,6 +71,8 @@ alias loghttp='tail -f /var/log/apache2/error_log'
 # System
 alias dock-no-delay='defaults write com.apple.Dock autohide-delay -float 0 && killall Dock'
 alias dock-delay='defaults delete com.apple.Dock autohide-delay && killall Dock'
+alias show-hidden-files='defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder'
+alias hide-hidden-files='defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder'
 
 
 # ========== #

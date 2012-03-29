@@ -70,6 +70,10 @@ alias flushdns='sudo dscacheutil -flushcache'
 # HTTP
 alias loghttp='tail -f /var/log/apache2/error_log'
 
+# System
+alias dock-no-delay='defaults write com.apple.Dock autohide-delay -float 0 && killall Dock'
+alias dock-delay='defaults delete com.apple.Dock autohide-delay && killall Dock'
+
 
 # ========== #
 #   Prompt   #

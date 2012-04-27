@@ -64,6 +64,11 @@ alias gactive="mv .git-inactive .git"
 # Bundle
 alias be='bundle exec '
 
+# Rails
+alias dmr='be rake db:migrate:reset'
+alias ds='be rake db:seed'
+alias bootstrap='dmr && ds'
+
 # Padrino
 alias pad='padrino'
 

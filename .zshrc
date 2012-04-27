@@ -16,6 +16,9 @@ ruby_r19="/usr/local/ruby/1.9.2-p290/bin"
 export PATH="$ruby_r19:$PATH"
 export RUBYOPT="rubygems"
 
+# Python
+export PATH="/usr/local/share/python:$PATH"
+
 # Custom
 export PATH="$HOME/bin:$PATH"
 

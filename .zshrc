@@ -37,6 +37,7 @@ alias tm="mate ."
 alias o.="open ."
 alias fd="open ."
 alias ll="ls -l"
+alias ip='echo -n `ifconfig | grep -Po "(?<=inet )\d*\.\d*\.\d*\.\d*(?=.*broadcast)"` | pbcopy'
 
 # Git
 alias gti="git" # shame

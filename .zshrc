@@ -31,6 +31,7 @@ export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 # =========== #
 
 alias hosts="mate /etc/hosts"
+alias config="mate ~/.zshrc"
 alias reload="source ~/.zshrc"
 alias back='cd $OLDPWD'
 alias m.="mate ."

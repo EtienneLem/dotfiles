@@ -30,6 +30,7 @@ export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 #   Aliases   #
 # =========== #
 
+alias code="cd ~/Code"
 alias hosts="mate /etc/hosts"
 alias config="mate ~/.zshrc"
 alias reload="source ~/.zshrc"

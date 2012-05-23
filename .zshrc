@@ -63,6 +63,7 @@ alias gsubi="git submodule init"
 alias gsubu="git submodule update"
 alias gdesactive="mv .git .git-inactive"
 alias gactive="mv .git-inactive .git"
+alias gcount="git shortlog -sn"
 
 # Bundle
 alias be='bundle exec '

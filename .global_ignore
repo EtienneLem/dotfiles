@@ -2,6 +2,7 @@
 .sass-cache
 *.gem
 *.rbc
+*.tmproj
 .bundle
 .config
 coverage
@@ -19,3 +20,6 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# Custom
+TODO.md

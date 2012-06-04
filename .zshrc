@@ -45,7 +45,7 @@ alias ip='echo -n `ifconfig | grep -Po "(?<=inet )\d*\.\d*\.\d*\.\d*(?=.*broadca
 # Git
 alias gti="git" # shame
 
-alias glog="git log --oneline --decorate"
+alias glog="git log --oneline --decorate -n 20"
 alias gst="git status -sbu"
 alias gdiff="git diff"
 alias gadd="git add -p"

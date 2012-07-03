@@ -12,7 +12,7 @@ export PATH="/usr/local/bin:$PATH"
 
 # ruby
 ruby_r18="/usr/local/ruby/1.8.7-p357/bin"
-ruby_r19="/usr/local/ruby/1.9.2-p290/bin"
+ruby_r19="/usr/local/ruby/1.9.3-p194/bin"
 export PATH="$ruby_r19:$PATH"
 export RUBYOPT="rubygems"
 

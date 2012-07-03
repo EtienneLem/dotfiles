@@ -36,16 +36,20 @@ alias config="mate ~/.zshrc"
 alias reload="source ~/.zshrc"
 alias back='cd $OLDPWD'
 alias m.="mate ."
-alias tm="mate ."
+alias tm="m."
+alias s.="subl ."
+alias st="s."
 alias o.="open ."
-alias fd="open ."
+alias fd="o."
 alias ll="ls -l"
 alias ip='echo -n `ifconfig | grep -Po "(?<=inet )\d*\.\d*\.\d*\.\d*(?=.*broadcast)"` | pbcopy'
+alias server='open http://localhost:1337 && python -m SimpleHTTPServer 1337'
 
 # Git
 alias gti="git" # shame
 
-alias glog="git log --oneline --decorate -n 20"
+alias _glog="git log --pretty=format:'%C(yellow)%h%C(reset)%C(bold red)%d%C(reset) %s %C(green)(%cr) %C(cyan)<%an>%C(reset)' --abbrev-commit"
+alias glog="_glog -n 30 | ruby -e 'puts STDIN.read.gsub(%(<#{%x(git config user.name).chomp}>), %())'"
 alias gst="git status -sbu"
 alias gdiff="git diff"
 alias gadd="git add -p"
@@ -65,6 +69,7 @@ alias gsubu="git submodule update"
 alias gdesactive="mv .git .git-inactive"
 alias gactive="mv .git-inactive .git"
 alias gcount="git shortlog -sn"
+alias grc="git rebase --continue"
 
 # Bundle
 alias be='bundle exec '

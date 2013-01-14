@@ -68,6 +68,7 @@ alias gdesactive="mv .git .git-inactive"
 alias gactive="mv .git-inactive .git"
 alias gcount="git shortlog -sn"
 alias grc="git rebase --continue"
+alias grm="git rebase master"
 
 # Bundle
 alias be='bundle exec '

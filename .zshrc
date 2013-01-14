@@ -40,7 +40,7 @@ alias st="s."
 alias o.="open ."
 alias fd="o."
 alias ll="ls -l"
-alias ip='echo -n `ifconfig | grep -Po "(?<=inet )\d*\.\d*\.\d*\.\d*(?=.*broadcast)"` | pbcopy'
+alias ip='curl http://icanhazip.com'
 alias server='open http://localhost:1337 && python -m SimpleHTTPServer 1337'
 
 # Git

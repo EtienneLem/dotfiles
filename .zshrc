@@ -5,7 +5,7 @@
 #   Environment   #
 # =============== #
 
-export EDITOR="mate -w"
+export EDITOR='mate -w'
 
 # Homebrew
 export PATH="/usr/local/bin:$PATH"

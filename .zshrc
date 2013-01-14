@@ -155,6 +155,10 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
   chpwd
 }
 
+# Rdio completions
+rdio_commands=(`rdio commands`)
+compctl -k rdio_commands rdio
+
 # Completions for Ruby, Git, etc.
 autoload compinit
 compinit

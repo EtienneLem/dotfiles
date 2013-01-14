@@ -94,6 +94,12 @@ alias show-hidden-files='defaults write com.apple.Finder AppleShowAllFiles YES &
 alias hide-hidden-files='defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder'
 
 
+# =========== #
+#  Functions  #
+# =========== #
+ipfwd() { sudo ipfw add 100 fwd 127.0.0.1,$1 tcp from any to me $2 }
+
+
 # ========== #
 #   Prompt   #
 # ========== #

@@ -23,3 +23,7 @@ doc/
 
 # Custom
 TODO.md
+
+# rbenv
+.ruby-version
+.rbenv-vars

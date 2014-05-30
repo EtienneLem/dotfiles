@@ -44,6 +44,7 @@ alias server='open http://localhost:1337 && python -m SimpleHTTPServer 1337'
 # Git
 alias gti="git" # shame
 
+# alias _glog="git log --pretty=format:'%C(yellow)%h%C(reset)%C(bold red)%d%C(reset) %s %C(green)(%cr) %C(cyan)<%an>%C(reset)' --abbrev-commit --branches --remotes --tags"
 alias _glog="git log --pretty=format:'%C(yellow)%h%C(reset)%C(bold red)%d%C(reset) %s %C(green)(%cr) %C(cyan)<%an>%C(reset)' --abbrev-commit"
 alias glog="_glog -n 30 | ruby -e 'puts STDIN.read.gsub(%(<#{%x(git config user.name).chomp}>), %())'"
 alias gst="git status -sbu"
@@ -55,7 +56,7 @@ alias gcia="git commit -vau"
 alias grebase="git rebase -i"
 alias gpull="git pull --rebase origin"
 alias gpullu="git pull --rebase upstream"
-alias gpush="git push origin"
+alias gpush="git push -u origin"
 alias gstash="git stash -u"
 alias gpop="git stash pop"
 alias gsub="gsubi && gsubu"
@@ -67,6 +68,11 @@ alias gactive="mv .git-inactive .git"
 alias gcount="git shortlog -sn"
 alias grc="git rebase --continue"
 alias grm="git rebase master"
+alias gclone="git clone --recursive"
+alias gstashci="git add --all && git commit -m '[STASH]'"
+alias gpopci="git uncommit"
+alias gmerge="git merge --no-ff"
+alias gclean="git clean -fd"
 
 # Bundle
 alias be='bundle exec '

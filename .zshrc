@@ -6,16 +6,16 @@
 # =============== #
 
 export EDITOR='mate -w'
+# export EDITOR='atom -w'
 
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
 
-# ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
-export RUBYOPT="rubygems"
+# Ruby
+export PATH="$HOME/.rbenv/shims:$PATH"
 
 # Python
-export PATH="/usr/local/share/python:$PATH"
+# export PATH="/usr/local/share/python:$PATH"
 
 # Custom
 export PATH="$HOME/bin:$PATH"
@@ -35,8 +35,6 @@ alias reload="source ~/.zshrc"
 alias back='cd $OLDPWD'
 alias m.="mate ."
 alias tm="m."
-alias s.="subl ."
-alias st="s."
 alias o.="open ."
 alias fd="o."
 alias ll="ls -l"
@@ -98,7 +96,7 @@ alias hide-hidden-files='defaults write com.apple.Finder AppleShowAllFiles NO &&
 #  Functions  #
 # =========== #
 ipfwd() { sudo ipfw add 100 fwd 127.0.0.1,$1 tcp from any to me $2 }
-
+tabname() { printf "\e]1;$1\a" }
 
 # ========== #
 #   Prompt   #
@@ -113,7 +111,7 @@ setopt prompt_subst
 local percent="%(?,%{$fg[green]%}%#%{$reset_color%},%{$fg[red]%}%#%{$reset_color%})"
 
 PROMPT='
-%F{135}%~%{$reset_color%}  $(git-prompt.rb)
+%F{135}%~%{$reset_color%} $(git-prompt.rb)
 ${percent} %{$reset_color%}'
 
 RPROMPT='%F{16}$(date)%{$reset_color%}'

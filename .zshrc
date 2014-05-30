@@ -160,8 +160,10 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
 }
 
 # Rdio completions
-rdio_commands=(`rdio commands`)
-compctl -k rdio_commands rdio
+if which rdio &> /dev/null; then
+  rdio_commands=(`~/Code/rdio-cli/bin/rdio commands`)
+  compctl -k rdio_commands rdio
+fi
 
 # Completions for Ruby, Git, etc.
 autoload compinit
